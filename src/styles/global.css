@@ -1,3 +1,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply 
+  bg-white
+  text-black
+  dark:text-white 
+  dark:bg-indigo-900
+}
+h1, 
+h2,
+h3,
+h4,
+h5 {
+  @apply 
+    text-indigo-600
+    dark:text-white
+}
+
+h1,
+.h1 {
+  @apply 
+    text-5xl
+    font-black
+}
+
+.blog-post header {  
+  @apply my-8
+}
+
+.blog-post header h1 {
+  @apply   
+    text-3xl    
+    m-0        
+        
+}
+
+
+.blog-post 
+section
+  h2, 
+  h3, 
+  h4, 
+  h5 {
+    font-family: 'Times New Roman', Times, serif;
+    @apply 
+      font-bold 
+      mt-10
+      mb-5      
+}
+
+.blog-post h2 {
+  @apply text-2xl
+}
+.blog-post h3 {
+  @apply text-xl
+}
+.blog-post h4 {
+  @apply text-lg
+}
+
+.blog-post section p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+.blog-post pre {
+  @apply rounded
+}
+
+/* .blog-post 
+section
+  h2, 
+  h3, 
+  h4, 
+  h5 {
+    font-family: 'Times New Roman', Times, serif;
+    @apply 
+      font-bold 
+      mt-10
+      mb-5      
+}
+
+.blog-post h1 {
+  @apply   
+    text-3xl    
+    m-0        
+    font-bold        
+}
+.blog-post h2 {
+  @apply text-2xl
+}
+.blog-post h3 {
+  @apply text-xl
+}
+.blog-post h4 {
+  @apply text-lg
+}
+
+.blog-post section p, li {
+  @apply my-3 text-gray-300
+}
+
+.blog-post section p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+.blog-post pre {
+  @apply rounded
+}
+
+.blog-post header {  
+  @apply my-8
+} */
