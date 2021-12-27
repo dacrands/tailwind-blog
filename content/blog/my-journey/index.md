@@ -3,11 +3,13 @@ title: My Journey!
 description: My foolproof guide to becoming a real-life software developer!
 ---
 
-My foolproof guide to becoming a real-life software developer!
-
 ![Michael Scott from the office](./office.jpg)
 
 ## Majoring in Psychology
+
+```python
+print(cool)
+```
 
 I am David Crandall, and I majored in psychology...
 

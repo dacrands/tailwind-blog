@@ -3,8 +3,6 @@ title: My Journey!
 description: My foolproof guide to becoming a real-life software developer!
 ---
 
-My foolproof guide to becoming a real-life software developer!
-
 ![Michael Scott from the office](./office.jpg)
 
 ## Majoring in Psychology
