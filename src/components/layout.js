@@ -6,15 +6,22 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
+  function toggleDarkTheme(e) {    
+    const htmlClassList = document.querySelector('html').classList
+    htmlClassList && htmlClassList.contains("dark") 
+      ? htmlClassList.remove("dark")
+      : htmlClassList.add("dark");
+  }
+
   if (isRootPath) {
     header = (
-      <h1 className="main-heading text-5xl font-bold">
+      <h1>
         <Link to="/">{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className="h1" to="/">
         {title}
       </Link>
     )
@@ -22,17 +29,26 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div
-      className="bg-slate-700 h-screen text-zinc-100"
+      className="flex 
+      flex-col 
+      align-items 
+      justify-center 
+      max-w-lg 
+      mx-auto 
+      pt-8
+      pb-4"
       data-is-root-path={isRootPath}>
-      <div className="container mx-auto px-4 pt-4">
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <label className="mb-5">
+      Dark Theme: {` `}
+      <input type="checkbox" onChange={toggleDarkTheme}/>
+      </label>
+      <header>{header}</header>
+      <main>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
     </div>
   )
 }
