@@ -29,12 +29,12 @@ h1,
 }
 
 .blog-post header {  
-  @apply my-8
+  @apply mb-12
 }
 
 .blog-post header h1 {
   @apply   
-    text-4xl    
+    text-5xl    
     m-0  
     text-indigo-500      
     dark:text-zinc-100    
