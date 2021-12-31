@@ -15,13 +15,13 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1>
+      <h1 className="mb-4 hover:underline">
         <Link to="/">{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="h1" to="/">
+      <Link className="h1 hover:underline" to="/">
         {title}
       </Link>
     )
@@ -33,7 +33,7 @@ const Layout = ({ location, title, children }) => {
       flex-col 
       align-items 
       justify-center 
-      max-w-lg 
+      max-w-2xl 
       mx-auto 
       pt-8
       pb-4"
