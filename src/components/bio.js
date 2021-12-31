@@ -31,19 +31,9 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio flex items-center gap-2 my-5 text-zinc-400">
-      <StaticImage
-        className="rounded-full"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.jpg"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Profile picture"
-      />
+    <div className="flex items-center gap-2 my-2">
       {author?.name && (
-        <p className="">
+        <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
         </p>
       )}
