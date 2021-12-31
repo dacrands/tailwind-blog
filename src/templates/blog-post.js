@@ -34,7 +34,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className="blog-post-nav my-5">
         <ul
           style={{
             display: `flex`,
@@ -46,14 +46,19 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link 
+                className="bg-zinc-200 dark:bg-zinc-600 p-2 rounded"
+                to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link 
+                className="bg-zinc-200 dark:bg-zinc-600 p-2 rounded"
+                to={next.fields.slug} 
+                rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
