@@ -58,7 +58,9 @@ const Layout = ({ location, title, children }) => {
       max-w-2xl 
       mx-auto 
       pt-8
-      pb-4"
+      pb-4
+      px-4
+      "
       data-is-root-path={isRootPath}>
       <DarkThemeToggle />
       <header>{header}</header>
