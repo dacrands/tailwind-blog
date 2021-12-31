@@ -10,6 +10,36 @@ body {
   dark:bg-zinc-800
 }
 
+#checkbox {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  height: 38px;
+  width: 32px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#checkbox + #checkbox-overlay:after{  
+  content: "☀️";    
+  font-size: 24px;
+  position: absolute;  
+
+  /* animation: setting 1500ms ease; */
+}
+
+#checkbox:checked + 
+#checkbox-overlay:after{
+  content: "🌜";  
+}
+
+@keyframes setting {
+  to {
+    transform: translateY(100%);
+  }
+
+}
+
 h2,
 h3,
 h4,

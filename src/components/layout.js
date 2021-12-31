@@ -38,10 +38,10 @@ const Layout = ({ location, title, children }) => {
       pt-8
       pb-4"
       data-is-root-path={isRootPath}>
-      <label className="mb-5">
-      Dark Theme: {` `}
-      <input type="checkbox" onChange={toggleDarkTheme}/>
-      </label>
+      <div className="mb-20 relative">              
+        <input name="toggle theme" id="checkbox" type="checkbox" onChange={toggleDarkTheme}/>
+        <span id="checkbox-overlay"></span>
+      </div>
       <header>{header}</header>
       <main>{children}</main>
       <footer>
