@@ -24,8 +24,6 @@ body {
   content: "☀️";    
   font-size: 24px;
   position: absolute;  
-
-  /* animation: setting 1500ms ease; */
 }
 
 #checkbox:checked + 
@@ -95,6 +93,15 @@ h1,
 .blog-post section p {
   @apply text-lg mb-5 font-medium font-serif
 }
+
+.blog-post section ul {
+  @apply list-disc pl-4 mb-4
+}
+
+.blog-post section a {
+  @apply text-indigo-600 dark:text-indigo-400 underline underline-offset-2
+}
+
 
 .blog-post pre {
   @apply rounded
