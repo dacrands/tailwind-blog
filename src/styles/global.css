@@ -5,18 +5,18 @@
 body {
   @apply 
   bg-white
-  text-black
-  dark:text-white 
-  dark:bg-indigo-900
+  text-zinc-600
+  dark:text-zinc-300 
+  dark:bg-zinc-800
 }
-h1, 
+
 h2,
 h3,
 h4,
 h5 {
   @apply 
     text-indigo-600
-    dark:text-white
+    dark:text-zinc-100
 }
 
 h1,
@@ -24,6 +24,8 @@ h1,
   @apply 
     text-5xl
     font-black
+    text-black
+    dark:text-indigo-400
 }
 
 .blog-post header {  
@@ -32,21 +34,20 @@ h1,
 
 .blog-post header h1 {
   @apply   
-    text-3xl    
-    m-0        
-        
+    text-4xl    
+    m-0  
+    text-indigo-500      
+    dark:text-zinc-100    
 }
 
-
-.blog-post 
-section
+.blog-post section
   h2, 
   h3, 
   h4, 
-  h5 {
-    font-family: 'Times New Roman', Times, serif;
+  h5 {  
     @apply 
       font-bold 
+      font-serif
       mt-10
       mb-5      
 }
@@ -62,56 +63,9 @@ section
 }
 
 .blog-post section p {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+  @apply text-lg mb-5 font-medium font-serif
 }
 
 .blog-post pre {
   @apply rounded
 }
-
-/* .blog-post 
-section
-  h2, 
-  h3, 
-  h4, 
-  h5 {
-    font-family: 'Times New Roman', Times, serif;
-    @apply 
-      font-bold 
-      mt-10
-      mb-5      
-}
-
-.blog-post h1 {
-  @apply   
-    text-3xl    
-    m-0        
-    font-bold        
-}
-.blog-post h2 {
-  @apply text-2xl
-}
-.blog-post h3 {
-  @apply text-xl
-}
-.blog-post h4 {
-  @apply text-lg
-}
-
-.blog-post section p, li {
-  @apply my-3 text-gray-300
-}
-
-.blog-post section p {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-}
-
-.blog-post pre {
-  @apply rounded
-}
-
-.blog-post header {  
-  @apply my-8
-} */
