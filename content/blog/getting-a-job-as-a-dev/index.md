@@ -1,16 +1,12 @@
 ---
-title: My Journey!
+title: Getting a Job as a Developer!
 date: 2022-01-01
-description: My foolproof guide to becoming a real-life software developer!
+description: Some tips for becoming a software developer for non-traditional
 ---
 
 ![Michael Scott from the office](./office.jpg)
 
 ## Majoring in Psychology
-
-```python
-print(cool)
-```
 
 I am David Crandall, and I majored in psychology...
 
