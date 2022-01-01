@@ -5,7 +5,7 @@ import {
   useEffect,
   useContext
 } from "react"
-import { ThemeContext } from "../context/context"
+import { ThemeContext } from "../context/theme"
 
 export const useDocument = () => {
   const [myDocument, setMyDocument] = useState(null)
