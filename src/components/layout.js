@@ -63,13 +63,13 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="mb-1 hover:underline mt-6">
+      <h1 className="mb-1 hover:underline mt-4">
         <Link to="/">{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="h1 hover:underline block mt-2" to="/">
+      <Link className="h1 hover:underline block mt-4" to="/">
         {title}
       </Link>
     )
