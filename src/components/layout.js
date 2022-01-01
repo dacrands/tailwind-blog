@@ -37,7 +37,7 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="mb-4 hover:underline">
+      <h1 className="mb-1 hover:underline">
         <Link to="/">{title}</Link>
       </h1>
     )
