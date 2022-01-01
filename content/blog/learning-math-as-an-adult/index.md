@@ -1,6 +1,6 @@
 ---
 title: How to Learn Math Later in Life
-date: 2015-05-01
+date: 2020-04-09
 description: Tips that proved helpful in confronting my intense fear of numbers.
 ---
 
