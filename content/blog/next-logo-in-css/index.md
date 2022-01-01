@@ -1,6 +1,7 @@
 ---
 title: NeXT Logo in HTML and CSS
 description: Recreating Rand's NeXT logo using HTML and CSS
+date: 2018-08-24
 ---
 
 ## The Original

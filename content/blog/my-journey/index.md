@@ -1,5 +1,6 @@
 ---
 title: My Journey!
+date: 2022-01-01
 description: My foolproof guide to becoming a real-life software developer!
 ---
 
