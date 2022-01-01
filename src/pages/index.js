@@ -32,27 +32,34 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug} className="mb-12 rounded">
-              <article                
+            <li key={post.fields.slug} className="mb-12 rounded hover:underline">
+              <article
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
-                  <h2 className="font-bold text-2xl mb-4 cursor-pointer underline">
-                    <Link to={post.fields.slug} itemProp="url">
+                <Link to={post.fields.slug} itemProp="url">
+                  <header>
+                    <small className="
+                      text-zinc-400 
+                      font-bold                                             
+                      uppercase 
+                      tracking-wider"
+                    >
+                      {post.frontmatter.date}
+                    </small>
+                    <h2 className="font-bold text-2xl mb-2 cursor-pointer">
                       <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p                    
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
+                    </h2>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                </Link>
               </article>
             </li>
           )
