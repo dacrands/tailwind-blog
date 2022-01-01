@@ -32,7 +32,7 @@ const Bio = () => {
 
   return (
     <div className="flex items-center gap-2 my-2">      
-        <p>
+        <p className="text-lg">
           I am a full-stack software developer who has been
           building things profressionally for the internet
           since 2018.
