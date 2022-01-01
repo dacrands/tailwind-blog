@@ -57,10 +57,6 @@ h1,
     dark:text-indigo-400
 }
 
-.blog-post header {  
-  @apply mb-12
-}
-
 .blog-post header h1 {
   @apply   
     text-5xl        
