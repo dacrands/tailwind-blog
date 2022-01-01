@@ -1,37 +1,63 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { useState } from "react"
+import {
+  useState,
+  useEffect,
+  useContext
+} from "react"
+import { ThemeContext } from "../context/context"
+
+export const useDocument = () => {
+  const [myDocument, setMyDocument] = useState(null)
+
+  useEffect(() => {
+    setMyDocument(document)
+  }, [])
+
+  return myDocument
+}
 
 const DarkThemeToggle = () => {
-  const [isChecked, setIsChecked] = useState(document.querySelector('html').classList.contains("dark"))
+  const doc = useDocument()
+  const [isDarkTheme, setIsDarkTheme] = useContext(ThemeContext);
+
+  const Wrapper = ({ children }) => (
+    <div className="mb-12 relative">
+      {children}
+    </div>
+  )
+
+  if (!doc) return <Wrapper />    
+
   function toggleDarkTheme(e) {
-    const htmlClassList = document.querySelector('html').classList
+    const htmlClassList = doc.querySelector('html').classList
     if (htmlClassList && htmlClassList.contains("dark")) {
       htmlClassList.remove("dark")
-      setIsChecked(false)
+      setIsDarkTheme(false)
       return
     }
     htmlClassList.add("dark");
-    setIsChecked(true)
+    setIsDarkTheme(true)
   }
 
   return (
-    <div className="mb-12 relative">
+    <Wrapper>
       <input
         name="toggle theme"
         id="checkbox"
         type="checkbox"
         onChange={toggleDarkTheme}
-        checked={isChecked}
+        checked={isDarkTheme}
       />
       <span id="checkbox-overlay"></span>
-    </div>
+    </Wrapper>
   )
 }
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+
 
   let header
 
@@ -59,7 +85,8 @@ const Layout = ({ location, title, children }) => {
       mx-auto 
       pt-8
       pb-4
-      px-4
+      sm:px-4
+      px-8
       "
       data-is-root-path={isRootPath}>
       <DarkThemeToggle />
