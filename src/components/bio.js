@@ -31,12 +31,29 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="flex items-center gap-2 my-2">      
-        <p className="text-lg">
-          I am a full-stack software developer who has been
-          building things profressionally for the internet
-          since 2018.
-        </p>      
+    <div className="max-w-lg mt-3">
+      <p className="text-lg">
+        I am a full-stack software developer,
+        building things for the internet profressionally
+        since 2018 and recreationally since 2016.
+       
+        {` `}
+        <a className="
+          underline 
+          underline-offset-4
+          decoration-2
+          text-zinc-700
+          dark:text-white
+          decoration-yellow-400 
+          dark:decoration-yellow-500    
+          hover:decoration-wavy                                  
+          font-bold"
+          target={"_blank"}
+          rel={"noreferrer"}
+          href="https://github.com/dacrands"> Check out
+          my GitHub</a> {` `}
+          to view some of my side-projects.
+      </p>
     </div>
   )
 }
