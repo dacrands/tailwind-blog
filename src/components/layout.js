@@ -30,14 +30,24 @@ const DarkThemeToggle = () => {
 
   if (!doc) return <Wrapper />    
 
+  if (localStorage.theme === 'dark' 
+      || (!('theme' in localStorage) 
+      && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark')
+    setIsDarkTheme(true)
+  } else {
+    document.documentElement.classList.remove('dark')
+    setIsDarkTheme(false)
+  }
+
   function toggleDarkTheme(e) {
-    const htmlClassList = doc.querySelector('html').classList
-    if (htmlClassList && htmlClassList.contains("dark")) {
-      htmlClassList.remove("dark")
+    if(isDarkTheme) {
+      localStorage.theme = 'light'
       setIsDarkTheme(false)
       return
     }
-    htmlClassList.add("dark");
+    localStorage.theme = 'dark'
     setIsDarkTheme(true)
   }
 
