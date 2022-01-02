@@ -6,6 +6,7 @@ import {
   useContext
 } from "react"
 import { ThemeContext } from "../context/theme"
+import { useRef } from "react"
 
 export const useDocument = () => {
   const [myDocument, setMyDocument] = useState(null)
@@ -54,6 +55,50 @@ const DarkThemeToggle = () => {
   )
 }
 
+const ScrollTopBtn = () => {
+  const doc = useDocument()
+  const btnRef = useRef();
+  useEffect(() => {
+    if(!doc) return
+    function handleScroll(e) {
+      const showHeight = window.pageYOffset 
+        + btnRef.current.getBoundingClientRect().top
+      if (showHeight > 1000) {
+        btnRef.current.style.display = 'block'
+        return
+      }
+      btnRef.current.style.display = 'none'
+    }
+    doc.addEventListener('scroll', handleScroll)
+    return () => {
+      doc.removeEventListener('scroll', handleScroll)
+    }
+  }, [doc])
+
+  if (!doc) return <></>
+
+
+  return <a 
+  ref={btnRef}
+  style={{display: "none"}}
+  className="fixed 
+    bottom-2 
+    right-2 
+    text-black
+    dark:text-zinc-100
+    bg-indigo-200 
+    hover:bg-indigo-300 
+    dark:bg-indigo-800 
+    dark:hover:bg-indigo-900 
+    rounded
+    font-bold
+    uppercase
+    text-sm
+    tracking-wider
+    p-2"
+  href="#top">Back To Top</a>
+}
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -90,9 +135,10 @@ const Layout = ({ location, title, children }) => {
       "
       data-is-root-path={isRootPath}>
       <DarkThemeToggle />
+      <ScrollTopBtn />
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer className="mb-4">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
