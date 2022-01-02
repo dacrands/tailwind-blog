@@ -100,6 +100,7 @@ h1,
    font-serif
 }
 
+.blog-post section ol,
 .blog-post section ul {
   @apply 
   list-disc 
@@ -109,6 +110,14 @@ h1,
   marker:text-indigo-600
   dark:text-zinc-300
   dark:marker:text-indigo-400
+}
+
+.blog-post section ol {
+  @apply list-decimal;
+}
+
+.blog-post section li {
+  @apply mb-2;
 }
 
 .blog-post section a {
