@@ -136,12 +136,12 @@ const Layout = ({ location, title, children }) => {
       flex-col 
       align-items 
       justify-center 
-      max-w-2xl 
+      max-w-xl 
       mx-auto 
       pt-8
       pb-4
       sm:px-4
-      px-8
+      px-5
       "
       data-is-root-path={isRootPath}>
       <DarkThemeToggle />
