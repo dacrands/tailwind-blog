@@ -1,7 +1,7 @@
 ---
 title: Getting a Job as a Developer!
 date: 2022-01-01
-description: Some tips for becoming a software developer for non-traditional
+description: Some tips for becoming a software developer for non-traditional job seekers.
 ---
 
 ![Michael Scott from the office](./office.jpg)
@@ -25,7 +25,7 @@ In fact, I was a person who fit these criteria and assure you the advice here as
 
 ## You Won't Get a Job as a Developer
 
-Excuse the provoking title to this section, though I feel it's important keep expecations in order. While I cannot verify their authenticity, I have read reddit posts about people who quit their job and spent $20k on a coding bootcamp with the hopes of becoming a developer. Don't do that. If you have a job, do not quit it until you have another. Also, do not spend more than a hundred bucks on learning materials, and that's at the high-end -- all of this can be learned for free.
+Excuse the provoking title to this section, though I feel it's important keep expecations in order. While I cannot verify their authenticity, I have read reddit posts about people who quit their jobs and spent $20k on a coding bootcamp with the hope of becoming developers. Don't do that. If you have a job, do not quit it until you have another. Also, do not spend more than a hundred bucks on learning materials, and that's at the high-end -- all of this can be learned for free.
 
 ## Are You Able to Tolerate Developing?
 Initially you will treat developing as a hobby, and the question you should ask yourself as you continue to learn and build things is whether or not you can tolerate programming enough to do it professionally. I am using "tolerate" and not "like" since I don't believe you need to *like* what you do for a living, but do need to be able to tolerate it.
