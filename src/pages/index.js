@@ -32,22 +32,32 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug} className="mb-10 rounded hover:underline">
+            <li key={post.fields.slug} className="mb-10 group">
               <article
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <Link to={post.fields.slug} itemProp="url">
-                  <header className="mb-2">
+                  <header className="mb-2 hover:text-yellow-400">
                     <small className="
-                      text-zinc-400 
+                      text-zinc-400                       
                       font-bold                                             
-                      uppercase 
+                      uppercase                       
                       tracking-wider"
                     >
                       {post.frontmatter.date}
                     </small>
-                    <h2 className="font-bold text-2xl cursor-pointer">
+                    <h2 className="
+                      font-bold 
+                      text-2xl 
+                      cursor-pointer
+                      underline 
+                      underline-offset-4
+                      decoration-2
+                    decoration-yellow-400 
+                    dark:decoration-yellow-500 
+                      hover:decoration-wavy
+                    ">
                       <span itemProp="headline">{title}</span>
                     </h2>
                   </header>
