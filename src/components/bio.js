@@ -31,14 +31,14 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="max-w-lg mt-3">
-      <p className="text-lg">
+    <div className="mt-3">
+      <p>
         I am a full-stack software developer,
         building things for the internet profressionally
-        since 2018 and recreationally since 2016.
-       
-        {` `}
+        since 2018 and recreationally since 2016.      
+        <br />
         <a className="
+          tracking-wide
           underline 
           underline-offset-4
           decoration-2
