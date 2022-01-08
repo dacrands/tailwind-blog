@@ -23,15 +23,15 @@ const DarkThemeToggle = () => {
   const [isDarkTheme, setIsDarkTheme] = useContext(ThemeContext);
 
   const Wrapper = ({ children }) => (
-    <div className="mb-12 relative">
+    <div className="mb-6 relative">
       {children}
     </div>
   )
 
-  if (!doc) return <Wrapper />    
+  if (!doc) return <Wrapper />
 
-  if (localStorage.theme === 'dark' 
-      || (!('theme' in localStorage) 
+  if (localStorage.theme === 'dark'
+    || (!('theme' in localStorage)
       && window.matchMedia('(prefers-color-scheme: dark)').matches)
   ) {
     document.documentElement.classList.add('dark')
@@ -41,14 +41,19 @@ const DarkThemeToggle = () => {
     setIsDarkTheme(false)
   }
 
-  function toggleDarkTheme(e) {
-    if(isDarkTheme) {
+  function toggleDarkTheme() {
+    if (isDarkTheme) {
       localStorage.theme = 'light'
       setIsDarkTheme(false)
       return
     }
     localStorage.theme = 'dark'
     setIsDarkTheme(true)
+  }
+
+  function handleKeydown(e) {
+    e.preventDefault();
+    e.key === 'Enter' && toggleDarkTheme()
   }
 
   return (
@@ -58,9 +63,16 @@ const DarkThemeToggle = () => {
         id="checkbox"
         type="checkbox"
         onChange={toggleDarkTheme}
+        onKeyPress={handleKeydown}
         checked={isDarkTheme}
+        style={{
+          transform: isDarkTheme ? "translateX(1px)" : "translateX(33px)"
+        }}
       />
-      <span id="checkbox-overlay"></span>
+      <div id="checkbox-wrapper" className="rounded relative min-w-min">        
+        <span>☀️</span>
+        <span>🌜</span>
+      </div>
     </Wrapper>
   )
 }
@@ -69,9 +81,9 @@ const ScrollTopBtn = () => {
   const doc = useDocument()
   const btnRef = useRef();
   useEffect(() => {
-    if(!doc) return
+    if (!doc) return
     function handleScroll(e) {
-      const showHeight = window.pageYOffset 
+      const showHeight = window.pageYOffset
         + btnRef.current.getBoundingClientRect().top
       if (showHeight > 1000) {
         btnRef.current.style.display = 'block'
@@ -88,10 +100,10 @@ const ScrollTopBtn = () => {
   if (!doc) return <></>
 
 
-  return <a 
-  ref={btnRef}
-  style={{display: "none"}}
-  className="fixed 
+  return <a
+    ref={btnRef}
+    style={{ display: "none" }}
+    className="fixed 
     bottom-2 
     right-2 
     text-black
@@ -106,7 +118,7 @@ const ScrollTopBtn = () => {
     text-sm
     tracking-wider
     p-2"
-  href="#top">Back To Top</a>
+    href="#top">Back To Top</a>
 }
 
 const Layout = ({ location, title, children }) => {
