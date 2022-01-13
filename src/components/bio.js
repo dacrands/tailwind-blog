@@ -8,6 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { FancyLink } from "./fancy-link"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -35,24 +36,13 @@ const Bio = () => {
       <p>
         I am a full-stack software developer,
         building things for the internet profressionally
-        since 2018 and recreationally since 2016.      
+        since 2018 and recreationally since 2016.
         <br />
-        <a className="
-          tracking-wide
-          underline 
-          underline-offset-4
-          decoration-2
-          text-zinc-700
-          dark:text-white
-          decoration-yellow-400 
-          dark:decoration-yellow-500    
-          hover:decoration-wavy                                  
-          font-bold"
-          target={"_blank"}
-          rel={"noreferrer"}
-          href="https://github.com/dacrands"> Check out
-          my GitHub</a> {` `}
-          to view some of my side-projects.
+        <FancyLink href={"https://github.com/dacrands"}>
+          Check out my GitHub
+        </FancyLink>
+        {` `}
+        to view some of my side-projects.
       </p>
     </div>
   )
