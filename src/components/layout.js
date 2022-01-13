@@ -130,8 +130,10 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="mb-1 hover:underline mt-4">
-        <Link to="/">{title}</Link>
+      <h1 className="mb-1 mt-4">
+      {/* <h1 className="mb-1 hover:underline mt-4"> */}
+        {/* <Link to="/">{title}</Link> //temp disable until blog added */}
+        {title}
       </h1>
     )
   } else {
@@ -160,10 +162,10 @@ const Layout = ({ location, title, children }) => {
       <ScrollTopBtn />
       <header>{header}</header>
       <main>{children}</main>
-      <footer className="mb-4">
-        © {new Date().getFullYear()}, Built with
+      <footer className="mt-8 mb-4 text-sm">
+        © {new Date().getFullYear()}, David Crandall.
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a className="underline" target="_blank" rel="noopener" href="https://www.gatsbyjs.com">Thanks Gatsby</a>.        
       </footer>
     </div>
   )
